@@ -2,6 +2,7 @@ let currentPlayer = "X";
 
 let board = ["", "", "", "", "", "", "", "", ""];
 
+const loseSound = new Audio("sounds/bazinga.mp3");
 
 const combinations = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8],
@@ -25,6 +26,7 @@ cells.forEach((cell, index) => {
 
             if (checkWinner(currentPlayer)) {
                 winner.textContent = `Player ${currentPlayer} Wins!`;
+                loseSound.play(); // play sound
                 endGame();
             } else if (board.every(cell => cell !== "")) {
                 winner.textContent = "Its a TIE";
