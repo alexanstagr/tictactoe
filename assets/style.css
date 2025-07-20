@@ -38,43 +38,47 @@ header .title {
   font-size: 1.5rem;
 }
 
-.players {
-  width: 300px;
-  height: 50px;
+.status {
+  width: 200px;
+  height: 60px;
+  position: absolute;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   font-family: "Pacifico", cursive;
-  color: #fff;
   align-items: center;
-  flex-direction: column;
-  gap: 1.45rem;
   left: 0;
   right: 0;
-  position: absolute;
   margin: auto;
-  top: 12%;
+  top: 10%;
 }
 
-.players .text {
-  font-size: 1.8rem;
+.winner {
+  color: #fff;
+  font-size: 1.7rem;
 }
-
-.player {
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
+.status button {
+  width: 100%;
+  padding: 0.34rem;
+  font-size: 1.4rem;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
+  font-family: "Pacifico", cursive;
+  background-color:#fff;
   border-radius: var(--radius);
   color: #000;
+  cursor: pointer;
+  opacity: 0.8;
+  display: none;
 }
 
-.btns {
-  display: flex;
-  flex-direction: row;
-  gap: 0.33rem;
+.status button:hover {
+  opacity: 1;
 }
+
 .container {
   width: 400px;
   height: 400px;
@@ -90,7 +94,17 @@ header .title {
 
 .thesis {
   background-color: rgba(63, 1, 1, 0.472);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
   border-radius: var(--radius);
+}
+
+.thesis.taken {
+  pointer-events: none;
 }
 
 .thesis:hover {
