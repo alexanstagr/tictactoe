@@ -82,6 +82,7 @@ header .title {
 .container {
   width: 400px;
   height: 400px;
+  max-width: 90dvw;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -60%);
